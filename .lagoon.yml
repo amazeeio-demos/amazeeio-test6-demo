@@ -1,6 +1,6 @@
 docker-compose-yaml: docker-compose.yml
 
-project: test6-drupal-example-simple
+project: amazeeio-test6-demo
 
 ssh: token.main.lagoon-core.test6.amazee.io:22
 api: https://api.main.lagoon-core.test6.amazee.io/graphql
@@ -102,7 +102,7 @@ backup-retention:
     daily: 185
 
 environments:
-  test6:
+  main:
     # routes:
     cronjobs:
       - name: drush cron
