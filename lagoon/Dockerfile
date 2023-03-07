@@ -21,6 +21,8 @@ FROM uselagoon/nginx-drupal:latest as nginx
 
 COPY --from=cli /app /app
 
+ENV WEBROOT=web
+
 FROM uselagoon/php-8.1-fpm:latest as php
  
 COPY --from=cli /app /app

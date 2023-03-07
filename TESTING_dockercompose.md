@@ -1,5 +1,5 @@
-Docker Compose Drupal 9 simple - php7.4, nginx, mariadb
-=======================================================
+Docker Compose Drupal 9 simple - php8, nginx, mariadb
+=====================================================
 
 This is a docker-compose version of the Lando example tests:
 
