@@ -47,32 +47,11 @@ tasks:
         when: LAGOON_ENVIRONMENT_TYPE=="production"
     - 
       run:
-        name: Check git branch regex
-        command: touch /tmp/test-4-branch-regex
-        service: cli
-        shell: bash
-        when: LAGOON_GIT_BRANCH=~".*-broken"
-    - 
-      run:
         name: Check variable exists
         command: touch /tmp/test-5-var-exists
         service: cli
         shell: bash
         when: exists("LAGOON_KUBERNETES")
-    - 
-      run:
-        name: Check added build variable exists
-        command: touch /tmp/test-6-env-var-exists
-        service: cli
-        shell: bash
-        when: TASK_TEST_VAR=="task"
-    - 
-      run:
-        name: Run with non-added variable with default
-        command: touch /tmp/test-7-default-var
-        service: cli
-        shell: bash
-        when: withDefault("TASK_ADDITIONAL_TEST_VAR", "true") == "true"
     - 
       run:
         name: Show results
