@@ -1,0 +1,10 @@
+current: local
+default: local
+lagoons:
+  amazeeio-test6:
+    graphql: ${LAGOON_CONFIG_API_HOST}
+    hostname: ${LAGOON_CONFIG_TOKEN_HOST}
+    port: ${LAGOON_CONFIG_TOKEN_PORT}
+    sshkey: ""
+updatecheckdisable: false
+environmentfromdirectory: true

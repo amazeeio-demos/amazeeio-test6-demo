@@ -1,0 +1,6 @@
+name: drupal-seed
+recipe: lagoon
+config:
+  flavor: drupal
+  build:
+    - composer install

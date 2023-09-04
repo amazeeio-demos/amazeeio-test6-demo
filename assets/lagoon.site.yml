@@ -1,0 +1,35 @@
+test6:
+  host: ssh.test6.amazee.io
+  paths:
+    files: /app/web/sites/default/files
+  user: test6-drupal-example-simple-test6
+  ssh:
+    options: '-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o LogLevel=FATAL -p 22'
+    tty: false
+
+test1:
+  host: ssh.test1.amazee.io
+  paths:
+    files: /app/web/sites/default/files
+  user: ${env.LAGOON_PROJECT}-${env-name}
+  ssh:
+    options: '-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o LogLevel=FATAL -p 22'
+    tty: false
+
+drupal-seed-test1:
+  host: ssh.test1.amazee.io
+  paths:
+    files: /app/web/sites/default/files
+  user: ${env-name}
+  ssh:
+    options: '-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o LogLevel=FATAL -p 22'
+    tty: false
+
+'*':
+  host: ssh.test6.amazee.io
+  paths:
+    files: /app/web/sites/default/files
+  user: ${env-name}
+  ssh:
+    options: '-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o LogLevel=FATAL -p 22'
+    tty: false
