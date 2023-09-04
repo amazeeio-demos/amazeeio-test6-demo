@@ -38,6 +38,11 @@ tasks:
         name: drush cr
         command: drush -y cr
         service: cli
+    - 
+      run:
+        name: createc urrent set of aliases
+        command: mkdir -p /tmp/drush && drush lg > /tmp/drush/sshportal.site.yml
+        service: cli
 
 environments:
   main:

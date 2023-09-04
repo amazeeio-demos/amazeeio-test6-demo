@@ -13,6 +13,7 @@ RUN composer install \
 COPY . /app
 
 RUN mkdir -p -v -m775 /app/web/sites/default/files
+RUN mkdir -p /tmp/drush
 
 # Define where the Drupal Root is located
 ENV WEBROOT=web
