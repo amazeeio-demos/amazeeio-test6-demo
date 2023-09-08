@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/amazeeio/drupal-integrations.git",
-                "reference": "b5ce1f2760cddd6ee60011f60e04228268ad93e7"
+                "reference": "4997d436c00192c55a349065ed7a1f3706fff618"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amazeeio/drupal-integrations/zipball/b5ce1f2760cddd6ee60011f60e04228268ad93e7",
-                "reference": "b5ce1f2760cddd6ee60011f60e04228268ad93e7",
+                "url": "https://api.github.com/repos/amazeeio/drupal-integrations/zipball/4997d436c00192c55a349065ed7a1f3706fff618",
+                "reference": "4997d436c00192c55a349065ed7a1f3706fff618",
                 "shasum": ""
             },
             "require": {
@@ -62,7 +62,7 @@
                 "source": "https://github.com/amazeeio/drupal-integrations/tree/feature/generate_alias_file",
                 "issues": "https://github.com/amazeeio/drupal-integrations/issues"
             },
-            "time": "2023-09-07T21:44:13+00:00"
+            "time": "2023-09-08T01:49:38+00:00"
         },
         {
             "name": "asm89/stack-cors",
