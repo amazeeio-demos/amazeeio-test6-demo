@@ -1,32 +1,36 @@
-test6:
+ztest6:
   host: ssh.test6.amazee.io
   paths:
     files: /app/web/sites/default/files
-  user: test6-drupal-example-simple-test6
+  # Uses hardcoded project-environment username
+  user: test6-drupal-seed
   ssh:
     options: '-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o LogLevel=FATAL -p 22'
     tty: false
 
-test1:
+ztest1:
   host: ssh.test1.amazee.io
   paths:
     files: /app/web/sites/default/files
+  # Uses env and wildcard for username
   user: ${env.LAGOON_PROJECT}-${env-name}
   ssh:
     options: '-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o LogLevel=FATAL -p 22'
     tty: false
 
-drupal-seed-test1:
+zdrupal-seed-test1:
   host: ssh.test1.amazee.io
   paths:
     files: /app/web/sites/default/files
+  # Uses expects project-environment wildcard
   user: ${env-name}
   ssh:
     options: '-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o LogLevel=FATAL -p 22'
     tty: false
 
 '*':
-  host: ssh.test6.amazee.io
+  # Uses ssh legacy for lagoon.* fallback, for use with drush la
+  host: ssh.main.lagoon-core.test6.amazee.io
   paths:
     files: /app/web/sites/default/files
   user: ${env-name}

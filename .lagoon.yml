@@ -40,8 +40,13 @@ tasks:
         service: cli
     - 
       run:
-        name: createc urrent set of aliases
-        command: mkdir -p /tmp/drush && drush lg > /tmp/drush/sshportal.site.yml
+        name: create current set of aliases
+        command: mkdir -p /tmp/drush && drush lg > /tmp/drush/self.site.yml
+        service: cli
+    - 
+      run:
+        name: list current aliases
+        command: drush --alias-path=/tmp/drush sa
         service: cli
 
 environments:
