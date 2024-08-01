@@ -19,9 +19,9 @@ tasks:
   post-rollout:
     - run:
         name: install a fresh Drupal site
-        # This will only run if the database doesn't exist.
+        # This will only run if the database doesn't exist. The `_` is a fallback for empty value`
         command: |
-          if [[ $(drush status --field='Drupal bootstrap') != "Successful" ]]; then drush -y si; fi
+          if [[ _$(drush status --field='Drupal bootstrap') != "_Successful" ]]; then drush -y si; fi
         service: cli
     - run:
         name: set site name
