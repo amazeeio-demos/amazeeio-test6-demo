@@ -1,6 +1,6 @@
 FROM uselagoon/lagoon-cli:latest as lagoon-cli
 
-FROM uselagoon/php-8.2-cli-drupal:latest as cli
+FROM uselagoon/php-8.3-cli-drupal:latest as cli
 
 COPY --from=lagoon-cli /lagoon /usr/local/bin/lagoon
 
@@ -23,6 +23,6 @@ COPY --from=cli /app /app
 
 ENV WEBROOT=web
 
-FROM uselagoon/php-8.2-fpm:latest as php
+FROM uselagoon/php-8.3-fpm:latest as php
  
 COPY --from=cli /app /app

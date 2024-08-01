@@ -1,12 +1,13 @@
 {
-    "name": "amazeeio/drupal-project",
-    "description": "Project template for Drupal 8 projects with composer hosted on amazee.io",
+    "name": "amazeeio-demos/drupal-seed-test6",
+    "description": "Project template for Drupal projects with MariaDB, hosted on Lagoon",
     "type": "project",
-    "license": "GPL-2.0+",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name": "Michael Schmid michael@amazee.io",
-            "role": "CTO"
+            "name": "The Lagoon Authors",
+            "homepage": "https://github.com/uselagoon",
+            "email": "uselagoon@amazee.io"
         }
     ],
     "repositories": [
@@ -16,14 +17,14 @@
         }
     ],
     "require": {
-        "amazeeio/drupal_integrations": "0.3.7",
-        "composer/installers": "2.2.0",
+        "amazeeio/drupal_integrations": "0.4.0",
+        "composer/installers": "2.3.0",
         "cweagans/composer-patches": "1.7.3",
-        "drupal/core-composer-scaffold": "10.1.2",
-        "drupal/core-project-message": "10.1.2",
-        "drupal/core-recommended": "10.1.2",
-        "drupal/lagoon_logs": "3.0.0",
-        "drush/drush": "12.1.3",
+        "drupal/core-composer-scaffold": "10.3.1",
+        "drupal/core-project-message": "10.3.1",
+        "drupal/core-recommended": "10.3.1",
+        "drupal/lagoon_logs": "3.0.1",
+        "drush/drush": "12.5.2",
         "zaporylie/composer-drupal-optimizations": "1.2.0"
     },
     "conflict": {
@@ -32,16 +33,17 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config":{
-        "platform": {"php": "8.2.8"},
+        "platform": {"php": "8.3.1"},
         "sort-packages": true,
         "allow-plugins": {
-            "drupal/core-composer-scaffold": true,
             "composer/installers": true,
             "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "zaporylie/composer-drupal-optimizations": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "php-http/discovery": true
         }
     },
     "extra": {
@@ -70,6 +72,6 @@
         }
     },
     "require-dev": {
-        "drupal/core-dev-pinned": "10.1.2"
+        "drupal/core-dev-pinned": "10.3.1"
     }
 }

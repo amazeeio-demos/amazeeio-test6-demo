@@ -4,6 +4,8 @@
     "test6"
   ],
   "extends": ["config:base"],
+  "automerge": true,
+  "automergeType": "pr",
   "dependencyDashboard": true,
   "prHourlyLimit": 0,
   "packageRules": [
@@ -28,6 +30,10 @@
         "drupal/core-project-message"
       ],
       "enabled": false
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub actions"
     }
   ]
 }
