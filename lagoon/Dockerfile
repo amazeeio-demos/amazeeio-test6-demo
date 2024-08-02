@@ -12,6 +12,8 @@ RUN composer install \
 
 COPY . /app
 
+RUN fix-permissions /app/web/sites/default/settings.php
+
 RUN mkdir -p -v -m775 /app/web/sites/default/files
 
 # Define where the Drupal Root is located
