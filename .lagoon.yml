@@ -26,7 +26,7 @@ tasks:
     - run:
         name: set site name
         command: |
-          if [[ $(drush status --field=Database) == "Connected" ]]; then drush -y cset system.site name "environment $LAGOON_ENVIRONMENT running on $LAGOON_KUBERNETES"
+          if [[ $(drush status --field=Database) == "Connected" ]]; then drush -y cset system.site name "environment $LAGOON_ENVIRONMENT running on $LAGOON_KUBERNETES"; fi
         service: cli
     - run:
         name: drush updb
