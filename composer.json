@@ -17,15 +17,14 @@
         }
     ],
     "require": {
-        "amazeeio/drupal_integrations": "0.4.0",
+        "amazeeio/drupal_integrations": "0.5.0",
         "composer/installers": "2.3.0",
         "cweagans/composer-patches": "1.7.3",
-        "drupal/core-composer-scaffold": "11.0.0-rc1",
-        "drupal/core-project-message": "11.0.0-rc1",
-        "drupal/core-recommended": "11.0.0-rc1",
+        "drupal/core-composer-scaffold": "11.0.5",
+        "drupal/core-project-message": "11.0.5",
+        "drupal/core-recommended": "11.0.5",
         "drupal/lagoon_logs": "3.0.1",
-        "drush/drush": "^13.0@rc",
-        "zaporylie/composer-drupal-optimizations": "1.2.0"
+        "drush/drush": "13.3.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -39,7 +38,6 @@
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "zaporylie/composer-drupal-optimizations": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true,
             "php-http/discovery": true
@@ -71,6 +69,6 @@
         }
     },
     "require-dev": {
-        "drupal/core-dev-pinned": "11.0.0-rc1"
+        "drupal/core-dev-pinned": "11.0.5"
     }
 }
